@@ -150,6 +150,16 @@ class Controller(object):
         return True, SUCCESS
     # deleteBucket()
 
+    def hasUser(self):
+        """
+        Returns if there is a user configured on the system.
+
+        @rtype: bool
+        @returns: True if the user is valid, False otherwise
+        """
+        return self.__user != None
+    # hasUser()
+
     def listBuckets(self):
         """
         Returns the total of available buckets.
