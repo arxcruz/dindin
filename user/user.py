@@ -53,6 +53,36 @@ class User(object):
             self.__userData[key] = userData[key]
     # __init__()
 
+    def getAge(self):
+        """
+        Returns the user age
+
+        @rtype: int
+        @returns: user age
+        """
+        return self.__userData['age']
+    # getAge()
+
+    def getCity(self):
+        """
+        Returns the user city
+
+        @rtype: basestring
+        @returns: user city
+        """
+        return self.__userData['city']
+    # getCity()
+
+    def getName(self):
+        """
+        Returns the user name
+
+        @rtype: basestring
+        @returns: user name
+        """
+        return self.__userData['name']
+    # getName()
+
     def getUserData(self):
         """
         Returns the dict with all user data.
@@ -73,15 +103,34 @@ class User(object):
         return self.__userId
     # getUserId()
 
+    def setAge(self, age):
+        """
+        Sets user age.
+
+        @type  age: int
+        @param age: user age
+
+        @rtype: None
+        @returns: Nothing
+        """
+        # sanity check
+        assert isinstance(age, int)
+
+        self.__userData['age'] = age
+    # setAge()
+
     def setCity(self, city):
         """
         Sets user city.
 
         @type  city: basestring
         @param city: user city
+
+        @rtype: None
+        @returns: Nothing
         """
         # sanity check
-        assert isistance(city, str)
+        assert isinstance(city, str)
 
         self.__userData['city'] = city
     # setCity()
@@ -92,9 +141,12 @@ class User(object):
 
         @type  name: basestring
         @param name: user name
+
+        @rtype: None
+        @returns: Nothing
         """
         # sanity check
-        assert isistance(name, str)
+        assert isinstance(name, str)
 
         self.__userData['name'] = name
     # setName()
